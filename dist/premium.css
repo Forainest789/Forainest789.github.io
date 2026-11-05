@@ -8,3 +8,9 @@ body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif;backgrou
 @media(prefers-reduced-motion:reduce){.hero-copy{animation:none}.neural-object{transition:none;transform:translate(-50%,-50%)}.button{transition:none}}
 .hero-subtitle{font-size:clamp(18px,2.1vw,28px);font-weight:500;line-height:1.35;letter-spacing:-.5px;color:#62626b;margin:0 auto 26px}
 @media(max-width:700px){.hero-subtitle{font-size:18px;letter-spacing:-.3px;margin-bottom:22px}}
+.symbiosis-study{display:grid;grid-template-columns:1.1fr 1fr;gap:64px;margin-top:28px;padding:36px 40px;background:#fff;border:1px solid #e5e5eb;border-radius:24px}
+.symbiosis-study h3{font-size:25px;line-height:1.3;letter-spacing:-.7px;font-weight:600}
+.symbiosis-study p{font-size:14px;line-height:1.75;color:#62626b}
+.symbiosis-study .study-status{font-size:12px;margin-bottom:0;padding-top:14px;border-top:1px solid #e5e5eb}
+.study-scope h4{font-size:14px;font-weight:600;margin-bottom:7px}.study-scope p:last-child{margin-bottom:0}
+@media(max-width:700px){.symbiosis-study{grid-template-columns:1fr;gap:26px;padding:26px 24px}.symbiosis-study h3{font-size:23px}.symbiosis-study p{font-size:13px}}
