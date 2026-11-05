@@ -1,9 +1,9 @@
 // Editorial content is sourced from the supplied CV and linked public repositories.
 const projects = [
-  {name:'BrainBind', category:'Neural representation learning', filter:'neuro', description:'Aligning synchronized EEG and fMRI with long-form naturalistic video representations. Includes modality fusion, bidirectional retrieval and controlled evaluation.', stack:'PyTorch / EEG / fMRI', repo:'Brainbind'},
-  {name:'Brain-to-robot decoding', category:'Brain–computer interfaces', filter:'neuro', description:'EEG/EMG motion decoding and robotic simulation. Exploring how confidence-aware neural predictions can support arm and hand movement.', stack:'Neural decoding / Robotics', repo:'EEGDecoding_Robotarm'},
-  {name:'Bidsify', category:'Research infrastructure', filter:'engineering', description:'Configuration-driven conversion of multimodal neuroscience data into BIDS structure, with subject and modality filtering and optional validation.', stack:'Python / BIDS / Multimodal data', repo:'Bidsify'},
-  {name:'Data-driven optimisation', category:'Applied machine learning', filter:'engineering', description:'Multi-objective modelling for electric vehicle charging infrastructure, connecting data-driven methods with real-world planning trade-offs.', stack:'Optimisation / Energy systems', repo:'MultiObjective-Optimization'}
+  {name:'BrainBind', category:'Neural representation learning', filter:'neuro', description:'Code for aligning EEG and fMRI recordings with video representations, including training, modality fusion and bidirectional retrieval evaluation.', stack:'PyTorch / EEG / fMRI', repo:'Brainbind'},
+  {name:'Brain-to-robot decoding', category:'Brain–computer interfaces', filter:'neuro', description:'Models for decoding arm and hand trajectories from EEG/EMG, with robot simulation and confidence-based filtering of predictions.', stack:'Neural decoding / Robotics', repo:'EEGDecoding_Robotarm'},
+  {name:'Bidsify', category:'Research infrastructure', filter:'engineering', description:'A Python tool for converting neuroscience recordings into BIDS format. A configuration file specifies subjects, sessions and modalities; validation is optional.', stack:'Python / BIDS / Multimodal data', repo:'Bidsify'},
+  {name:'Data-driven optimisation', category:'Applied machine learning', filter:'engineering', description:'Code accompanying our iScience paper on electric vehicle charging infrastructure. The model compares planning objectives across different energy scenarios.', stack:'Optimisation / Energy systems', repo:'MultiObjective-Optimization'}
 ];
 const publications = [
  {venue:'BMVC', year:'2026 · Accepted', title:'BrainBind: Bridging Synchronized EEG and fMRI through Long-Form Naturalistic Video Representations.', authors:'Shixiao Wang, Rining Wu, Jian K. Liu.', url:'https://github.com/Forainest789/Brainbind', label:'Code ↗'},
@@ -21,11 +21,11 @@ const manuscripts = [
  ['Spikes2RGB: Conditional Latent Diffusion for Chromatic Spike Reconstruction.', 'Under submission']
 ];
 const experience = [
- ['Apr – Oct 2026','National Institute of Informatics','Visiting PhD Researcher · Tokyo','Temporal memory for video generation, memory retrieval and conditioning, with controlled experiments separating memory content from injection-path effects.'],
- ['Mar 2025 – Mar 2026','University of Birmingham · CHBH','Research Assistant','EEG/fMRI processing, model training and analysis for cross-modal neural–visual alignment, retrieval and representational similarity.'],
- ['Oct 2024 – Jun 2025','University of Birmingham · CNCR','Research Assistant','Neural motor decoding and arm/hand trajectory modelling, connecting EEG/EMG predictions with Franka Panda simulation in MuJoCo.'],
- ['Apr 2023 – Aug 2024','Huawei Technologies','Multimodal AI Software Engineer · Hangzhou','Multimodal modules in MindSpeed-MM, diffusion and video-generation baselines, distributed training workflows and performance analysis.'],
- ['Mar – Nov 2022','Newcastle University','Research Assistant','Data-driven modelling and simulation for electric vehicle charging infrastructure across four energy scenarios.']
+ ['Apr – Oct 2026','National Institute of Informatics','Visiting PhD Researcher · Tokyo','I studied memory mechanisms in video generation and ran controlled experiments to distinguish the effect of memory content from the way it enters the model.'],
+ ['Mar 2025 – Mar 2026','University of Birmingham · CHBH','Research Assistant','I processed EEG/fMRI data, trained models to align neural recordings with visual representations, and analysed retrieval and representational similarity.'],
+ ['Oct 2024 – Jun 2025','University of Birmingham · CNCR','Research Assistant','I worked on arm and hand trajectory decoding from EEG/EMG, using the predicted trajectories in MuJoCo simulations of a Franka Panda robot.'],
+ ['Apr 2023 – Aug 2024','Huawei Technologies','Multimodal AI Software Engineer · Hangzhou','I integrated multimodal components into MindSpeed-MM, reproduced diffusion and video-generation baselines, and worked on distributed training and performance analysis.'],
+ ['Mar – Nov 2022','Newcastle University','Research Assistant','I worked on modelling and simulation for electric vehicle charging infrastructure, comparing four energy scenarios in Newcastle.']
 ];
 const escapeHtml = value => value.replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 document.querySelector('#projects').innerHTML = projects.map(p => `<article class="project" data-category="${p.filter}"><span class="category">${p.category}</span><h3>${p.name}</h3><p>${p.description}</p><div class="project-bottom"><small>${p.stack}</small><a class="text-link" href="https://github.com/Forainest789/${p.repo}" target="_blank" rel="noreferrer">View code ↗</a></div></article>`).join('');
