@@ -1,0 +1,8 @@
+*.png
+*.zip
+check*.cjs
+diagnose.cjs
+redesign.py
+node_modules/
+.DS_Store
+Thumbs.db

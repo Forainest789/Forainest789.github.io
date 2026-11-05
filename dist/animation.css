@@ -1,0 +1,16 @@
+/* Compositor-only motion keeps text and layout stationary. */
+.neural-motion{position:absolute;inset:0;transform-origin:50% 50%;transition:transform .22s ease-out;pointer-events:none}
+.neural-position{position:absolute;width:640px;aspect-ratio:920/760;left:50%;top:50%;transform:translate(calc(-50% + var(--scene-x)),calc(-50% + var(--scene-y)));transition:transform .7s cubic-bezier(.2,.7,.2,1);pointer-events:none}
+.neural-position .neural-object{position:static;display:block;width:100%;height:100%;max-width:none;transform:none;rotate:none;transition:none;transform-origin:50% 50%}
+
+
+.hero-figure figcaption{align-items:center;gap:14px;flex-wrap:wrap}
+.hero-figure figcaption>span{margin-left:auto}
+.motion-toggle{border:1px solid #d3d3de;border-radius:20px;padding:5px 11px;color:#62626b;background:transparent;font:inherit;font-size:10px;cursor:pointer}
+.motion-toggle:hover{background:#eaeaf0}
+.motion-toggle[hidden]{display:none}
+@media(max-width:1000px){.neural-position{width:580px}}
+@media(max-width:700px){.neural-position{width:min(400px,110vw);top:46%}.motion-toggle{font-size:9px;padding:4px 9px}.hero-figure figcaption{gap:8px}}
+@media(prefers-reduced-motion:reduce){.neural-position .neural-object{animation:none;transform:none}.neural-position{transition:none;transform:translate(-50%,-50%)}.neural-motion{transition:none;transform:none!important}}
+
+.neural-canvas{display:block;width:100%;height:100%;pointer-events:none}.neural-position .neural-object[hidden]{display:none}
